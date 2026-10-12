@@ -1,0 +1,39 @@
+name: Publicar cartinha no GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  publicar:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar arquivos do repositório
+        uses: actions/checkout@v4
+      - name: Preparar GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Preparar somente os arquivos do site
+        run: |
+          mkdir -p _site
+          cp index.html style.css script.js _site/
+          cp ./*.jpg ./*.jpeg ./*.png ./*.mp3 _site/
+      - name: Enviar arquivos do site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Publicar site
+        id: deployment
+        uses: actions/deploy-pages@v4

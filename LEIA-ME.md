@@ -1,18 +1,22 @@
-# Sua cartinha de aniversário ♡
+# Cartinha de aniversário ♡
 
-## Como abrir
+## Como abrir localmente
 
 Abra `index.html` no navegador. Para rodar com Python, abra um terminal nesta pasta e execute `python -m http.server 8000`; depois acesse `http://localhost:8000`.
 
-## Personalizações rápidas
+## Personalizar
 
-- **Fotos:** as imagens já estão em `assets`. Em `script.js`, edite a lista `photos` para trocar os caminhos e as legendas. Para adicionar fotos, copie os arquivos para `assets` e acrescente mais itens à lista.
-- **Música:** copie seu arquivo MP3 para `assets`, renomeie para `sua-musica.mp3` ou altere o caminho do `<source>` em `index.html`. A faixa apresentada na imagem que você enviou é “Baby Now That I Found You”, de Ella Bright; o arquivo de áudio não veio junto.
-- **Quiz:** edite `correctAnswer` em `script.js` e o texto da pergunta em `index.html`. A comparação ignora maiúsculas, espaços nas pontas e acentos.
-- **Textos:** edite diretamente os parágrafos em `index.html`, incluindo o tempo juntos e a mensagem final.
-- **Cores e fontes:** as principais cores ficam no começo de `style.css`, nas variáveis dentro de `:root`.
-- **Figurinhas decorativas:** as quatro PNGs `image-1.png` a `image-4.png` ficam em `assets` e aparecem sobrepostas às seções. Ajuste tamanho e posição pelas classes `.sticker-*` no final de `style.css`.
+- **Fotos:** os arquivos de imagem ficam na raiz do projeto, no mesmo nível de `index.html`. Edite a lista `photos` em `script.js` para trocar caminhos e legendas.
+- **Música:** o arquivo `Baby Now That I Found You.mp3` fica na raiz; altere o `<source>` em `index.html` para usar outra faixa.
+- **Sons do quiz:** `comemoracao.mp3` e `beijo.mp3` tocam após a resposta certa. `Windows Error Meme Sound Effect.mp3` toca após uma resposta errada.
+- **Quiz:** edite `correctAnswer` em `script.js` e o texto da pergunta em `index.html`.
+- **Contagem regressiva:** `birthdayTarget` em `script.js` define 24/11/2026 à meia-noite no horário de Brasília.
+- **Figurinhas:** PNGs e demais imagens ficam na raiz. Posições e tamanhos estão no final de `style.css`.
 
-O quiz inicial roda no navegador, então serve como brincadeira carinhosa; a resposta pode ser encontrada por alguém que inspecione os arquivos do site. Não é uma senha de segurança.
+## GitHub Pages
 
-- **Contagem regressiva:** a data e o fuso estão definidos em `birthdayTarget` no `script.js` (24/11/2026 à meia-noite de Brasília).
+Mantenha `index.html`, `style.css`, `script.js` e os arquivos de mídia juntos na raiz do repositório. O fluxo em `.github/workflows/pages.yml` publica somente esses arquivos e exclui as antigas fotos do olho.
+
+Se o repositório for privado, confirme que o plano da conta permite GitHub Pages a partir de repositório privado. O site publicado continua público para abrir sem login.
+
+O quiz é uma brincadeira; a resposta pode ser encontrada no código do navegador e não funciona como senha de segurança.
