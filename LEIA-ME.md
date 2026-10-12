@@ -6,16 +6,16 @@ Abra `index.html` no navegador. Para rodar com Python, abra um terminal nesta pa
 
 ## Personalizar
 
-- **Fotos:** os arquivos de imagem ficam na raiz do projeto, no mesmo nível de `index.html`. Edite a lista `photos` em `script.js` para trocar caminhos e legendas.
-- **Música:** o arquivo `Baby Now That I Found You.mp3` fica na raiz; altere o `<source>` em `index.html` para usar outra faixa.
+- **Fotos:** coloque as imagens em `assets/`. Edite a lista `photos` em `script.js` para trocar caminhos e legendas.
+- **Música:** coloque o arquivo de áudio em `assets/`; altere o `<source>` em `index.html` para usar outra faixa.
 - **Sons do quiz:** `comemoracao.mp3` e `beijo.mp3` tocam após a resposta certa. `Windows Error Meme Sound Effect.mp3` toca após uma resposta errada.
 - **Quiz:** edite `correctAnswer` em `script.js` e o texto da pergunta em `index.html`.
 - **Contagem regressiva:** `birthdayTarget` em `script.js` define 24/11/2026 à meia-noite no horário de Brasília.
-- **Figurinhas:** PNGs e demais imagens ficam na raiz. Posições e tamanhos estão no final de `style.css`.
+- **Figurinhas e imagens:** ficam em `assets/`. Posições e tamanhos estão no final de `style.css`.
 
 ## GitHub Pages
 
-Mantenha `index.html`, `style.css`, `script.js` e os arquivos de mídia juntos na raiz do repositório. O fluxo em `.github/workflows/pages.yml` publica somente esses arquivos e exclui as antigas fotos do olho.
+Mantenha `index.html`, `style.css`, `script.js` e a pasta `assets/` na raiz do repositório. O fluxo em `.github/workflows/pages.yml` publica a pasta de mídia junto com o site.
 
 Se o repositório for privado, confirme que o plano da conta permite GitHub Pages a partir de repositório privado. O site publicado continua público para abrir sem login.
 

@@ -8,7 +8,7 @@
 /* Foto enviada como fundo nítido em toda a página. */
 html { background: #f8eee8; }
 body { background: transparent; }
-body:before { content: ""; position: fixed; inset: -14px; z-index: -2; opacity: 1; background: url("./Screenshot_20261009_211518_Gallery.jpg") center 38% / cover no-repeat; filter: none; pointer-events: none; }
+body:before { content: ""; position: fixed; inset: -14px; z-index: -2; opacity: 1; background: url("./assets/Screenshot_20261009_211518_Gallery.jpg") center 38% / cover no-repeat; filter: none; pointer-events: none; }
 body:after { content: none; }
 /* Figurinhas decorativas sobrepostas, sem ocupar espaço no conteúdo. */
 .hero, .story, .gallery-section, .quiz { position: relative; }

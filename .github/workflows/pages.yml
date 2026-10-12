@@ -29,7 +29,7 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html style.css script.js _site/
-          cp ./*.jpg ./*.jpeg ./*.png ./*.mp3 _site/
+          cp -R assets _site/assets
       - name: Enviar arquivos do site
         uses: actions/upload-pages-artifact@v3
         with:

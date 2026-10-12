@@ -1,14 +1,14 @@
 // PERSONALIZE AQUI: troque as fotos, legendas, pergunta e resposta.
 const photos = [
-  { src: './IMG-20261009-WA0049.jpg', caption: 'Mais um motivo para guardar esse dia no coração ♡' },
-  { src: './Screenshot_20261009_193602_Photos.jpg', caption: 'Meu lugar favorito é pertinho de você.' },
-  { src: './IMG-20260908-WA0041.jpg', caption: 'A gente, do jeitinho que eu amo.' },
-  { src: './IMG-20260706-WA0019.jpg', caption: 'Uma lembrança que sempre me faz sorrir.' },
-  { src: './IMG-20260706-WA0038.jpg', caption: 'Quero colecionar muitos momentos assim.' },
-  { src: './IMG-20260608-WA0039.jpg', caption: 'Com você, até os dias comuns são especiais.' },
-  { src: './IMG-20260305-WA0042.jpg', caption: 'Mais uma memória nossa para guardar.' },
-  { src: './IMG-20260224-WA0051.jpg', caption: 'Você deixa tudo mais bonito.' },
-  { src: './WhatsApp Image 2026-09-20 at 12.03.17.jpeg', caption: 'Que venham muitos outros capítulos.' }
+  { src: './assets/IMG-20261009-WA0049.jpg', caption: 'Mais um motivo para guardar esse dia no coração ♡' },
+  { src: './assets/Screenshot_20261009_193602_Photos.jpg', caption: 'Meu lugar favorito é pertinho de você.' },
+  { src: './assets/IMG-20260908-WA0041.jpg', caption: 'A gente, do jeitinho que eu amo.' },
+  { src: './assets/IMG-20260706-WA0019.jpg', caption: 'Uma lembrança que sempre me faz sorrir.' },
+  { src: './assets/IMG-20260706-WA0038.jpg', caption: 'Quero colecionar muitos momentos assim.' },
+  { src: './assets/IMG-20260608-WA0039.jpg', caption: 'Com você, até os dias comuns são especiais.' },
+  { src: './assets/IMG-20260305-WA0042.jpg', caption: 'Mais uma memória nossa para guardar.' },
+  { src: './assets/IMG-20260224-WA0051.jpg', caption: 'Você deixa tudo mais bonito.' },
+  { src: './assets/WhatsApp Image 2026-09-20 at 12.03.17.jpeg', caption: 'Que venham muitos outros capítulos.' }
 ];
 
 // Use uma resposta que só vocês conheçam. Espaços e maiúsculas são ignorados.
@@ -77,9 +77,9 @@ envelopeButton.addEventListener('click', () => {
     document.body.classList.remove('envelope-lock');
   }, delay);
 });// Toca os efeitos em sequência depois da resposta correta.
-const celebrationSound = new Audio('./comemoracao.mp3');
-const kissSound = new Audio('./beijo.mp3');
-const wrongAnswerSound = new Audio('./Windows%20Error%20Meme%20Sound%20Effect.mp3');
+const celebrationSound = new Audio('./assets/comemoracao.mp3');
+const kissSound = new Audio('./assets/beijo.mp3');
+const wrongAnswerSound = new Audio('./assets/Windows%20Error%20Meme%20Sound%20Effect.mp3');
 celebrationSound.preload = 'auto';
 kissSound.preload = 'auto';
 wrongAnswerSound.preload = 'auto';
