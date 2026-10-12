@@ -85,3 +85,14 @@ body.envelope-lock { overflow: hidden; }
 .countdown-grid strong { color: var(--ink); font: 700 clamp(1.25rem,4vw,1.8rem)/1.1 'DM Sans',sans-serif; font-variant-numeric: tabular-nums; }
 .countdown-grid span { margin-top: 3px; color: var(--muted); font-size: .68rem; text-transform: uppercase; letter-spacing: .05em; }
 .countdown-message { margin: 4px 0 0; color: var(--rose-dark); font: 600 1.15rem 'Playfair Display',serif; }
+body.gate-lock { overflow: hidden; }
+.countdown-gate { position: fixed; inset: 0; z-index: 110; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 28px 20px; text-align: center; background: radial-gradient(ellipse at 50% 42%, rgba(255,250,246,.9), rgba(248,238,232,.98) 76%); }
+.countdown-gate h1 { margin: 0; font: 600 clamp(2.2rem, 7vw, 4rem)/1.08 'Playfair Display',serif; letter-spacing: -.035em; }
+.countdown-gate h1 span { color: var(--rose); }
+.countdown-gate .countdown-card { margin: 24px 0 0; }
+.gate-form { width: min(490px, 100%); margin-top: 24px; }
+.gate-form label { display: block; margin-bottom: 8px; color: var(--muted); font-size: .84rem; }
+.gate-input-row { display: flex; gap: 9px; }
+.gate-feedback { min-height: 1.5em; margin: 8px 0 0; color: #a33e4a; font-size: .88rem; }
+.gate-open { margin-top: 22px; }
+@media (max-width: 520px) { .gate-input-row { flex-direction: column; } .gate-input-row .button { min-height: 48px; } }

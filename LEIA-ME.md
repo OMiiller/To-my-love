@@ -11,6 +11,7 @@ Abra `index.html` no navegador. Para rodar com Python, abra um terminal nesta pa
 - **Sons do quiz:** `comemoracao.mp3` e `beijo.mp3` tocam após a resposta certa. `Windows Error Meme Sound Effect.mp3` toca após uma resposta errada.
 - **Quiz:** edite `correctAnswer` em `script.js` e o texto da pergunta em `index.html`.
 - **Contagem regressiva:** `birthdayTarget` em `script.js` define 24/11/2026 à meia-noite no horário de Brasília.
+- **Acesso antes da data:** a cartinha fica atrás da contagem até o aniversário. Para liberar antes, troque `creatorPassword` em `script.js` (senha atual: `pizzaquente`). Essa senha é apenas uma trava casual, pois fica visível no código do site.
 - **Figurinhas e imagens:** ficam em `assets/`. Posições e tamanhos estão no final de `style.css`.
 
 ## GitHub Pages

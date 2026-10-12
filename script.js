@@ -44,12 +44,31 @@ showPhoto(0);
 const birthdayTarget = new Date('2026-11-24T00:00:00-03:00').getTime();
 const countdownGrid = document.querySelector('#countdown');
 const countdownMessage = document.querySelector('#countdown-message');
+const countdownGate = document.querySelector('#countdown-gate');
+const gateForm = document.querySelector('#gate-form');
+const gatePassword = document.querySelector('#gate-password');
+const gateFeedback = document.querySelector('#gate-feedback');
+const gateOpenButton = document.querySelector('#gate-open');
+const envelopeIntro = document.querySelector('#envelope-intro');
 let countdownInterval;
+
+function openEnvelopeIntro() {
+  countdownGate.hidden = true;
+  envelopeIntro.hidden = false;
+  document.body.classList.remove('gate-lock');
+}
+
+function releaseOnBirthday() {
+  countdownGrid.hidden = true;
+  countdownMessage.hidden = false;
+  gateForm.hidden = true;
+  gateOpenButton.hidden = false;
+}
+
 function updateCountdown() {
   const remaining = birthdayTarget - Date.now();
   if (remaining <= 0) {
-    countdownGrid.hidden = true;
-    countdownMessage.hidden = false;
+    releaseOnBirthday();
     clearInterval(countdownInterval);
     return;
   }
@@ -63,8 +82,22 @@ function updateCountdown() {
   document.querySelector('#countdown-seconds').textContent = String(seconds).padStart(2, '0');
 }
 updateCountdown();
-countdownInterval = window.setInterval(updateCountdown, 1000);
-const envelopeIntro = document.querySelector('#envelope-intro');
+if (Date.now() < birthdayTarget) countdownInterval = window.setInterval(updateCountdown, 1000);
+
+// PERSONALIZE AQUI: troque a senha para liberar a cartinha antes da data.
+const creatorPassword = 'pizzaquente';
+gateForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  if (gatePassword.value === creatorPassword) {
+    gateFeedback.textContent = '';
+    openEnvelopeIntro();
+    return;
+  }
+  gateFeedback.textContent = 'Senha incorreta. Tente novamente.';
+  gatePassword.select();
+});
+gateOpenButton.addEventListener('click', openEnvelopeIntro);
+
 const envelopeButton = document.querySelector('#open-envelope');
 envelopeButton.addEventListener('click', () => {
   if (envelopeIntro.classList.contains('is-opening')) return;

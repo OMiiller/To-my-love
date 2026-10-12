@@ -7,8 +7,32 @@
   <title>Para você, minha flor de Jasmim ♡</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="envelope-lock">
-  <section class="envelope-intro" id="envelope-intro" aria-label="Abertura da cartinha">
+<body class="gate-lock envelope-lock">
+  <section class="countdown-gate" id="countdown-gate" aria-label="Contagem regressiva">
+    <p class="eyebrow">UMA SURPRESA ESTA TE ESPERANDO</p>
+    <h1>Quase na hora, <span>meu amor!</span></h1>
+    <div class="countdown-card">
+      <p class="countdown-label">Contagem regressiva para o seu dia</p>
+      <div class="countdown-grid" id="countdown" aria-live="off">
+        <div><strong id="countdown-days">00</strong><span>dias</span></div>
+        <div><strong id="countdown-hours">00</strong><span>horas</span></div>
+        <div><strong id="countdown-minutes">00</strong><span>minutos</span></div>
+        <div><strong id="countdown-seconds">00</strong><span>segundos</span></div>
+      </div>
+      <p class="countdown-message" id="countdown-message" aria-live="polite" hidden>Chegou o dia! Feliz aniversario, meu amor! &#9825;</p>
+    </div>
+    <form class="gate-form" id="gate-form">
+      <label for="gate-password">Acesso do criador</label>
+      <div class="gate-input-row">
+        <input id="gate-password" type="password" placeholder="Digite a senha para abrir antes" autocomplete="current-password" required>
+        <button class="button" type="submit">Abrir com senha</button>
+      </div>
+      <p class="gate-feedback" id="gate-feedback" aria-live="polite"></p>
+    </form>
+    <button class="button gate-open" id="gate-open" type="button" hidden>Abrir minha surpresa &#9825;</button>
+  </section>
+
+  <section class="envelope-intro" id="envelope-intro" aria-label="Abertura da cartinha" hidden>
     <div class="intro-copy">
       <p class="eyebrow">UMA SURPRESA ESPECIAL MINHA LINDA</p>
       <h1>Uma cartinha<br><span>pra você</span></h1>
@@ -34,16 +58,6 @@
       <p class="eyebrow">UM PEDACINHO DO MEU CORAÇÃO</p>
       <h1>Feliz aniversário,<br><span>minha gatinha!</span></h1>
       <p class="hero-note">Preparei isso com todo meu amor e carinho pra a pessoa mais perfeita que existe: vc ne meu amor da minha vida (n me julga pfvv). ♡</p>
-      <div class="countdown-card">
-        <p class="countdown-label">Contagem regressiva para o Seu dia</p>
-        <div class="countdown-grid" id="countdown" aria-live="off">
-          <div><strong id="countdown-days">00</strong><span>dias</span></div>
-          <div><strong id="countdown-hours">00</strong><span>horas</span></div>
-          <div><strong id="countdown-minutes">00</strong><span>minutos</span></div>
-          <div><strong id="countdown-seconds">00</strong><span>segundos</span></div>
-        </div>
-        <p class="countdown-message" id="countdown-message" aria-live="polite" hidden>Chegou o dia! Feliz aniversário, meu amor! ♡</p>
-      </div>
       <a class="down-link" href="#nossa-historia" aria-label="Continuar">↓</a>
     </header>
 
