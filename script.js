@@ -1,14 +1,14 @@
 // PERSONALIZE AQUI: troque as fotos, legendas, pergunta e resposta.
 const photos = [
-  { src: './assets/IMG-20261009-WA0049.jpg', caption: 'Mais um motivo para guardar esse dia no coração ♡' },
-  { src: './assets/Screenshot_20261009_193602_Photos.jpg', caption: 'Meu lugar favorito é pertinho de você.' },
-  { src: './assets/IMG-20260908-WA0041.jpg', caption: 'A gente, do jeitinho que eu amo.' },
-  { src: './assets/IMG-20260706-WA0019.jpg', caption: 'Uma lembrança que sempre me faz sorrir.' },
+  { src: './assets/IMG-20261009-WA0049.jpg', caption: 'Top melhores fotos nossas juntos ♡' },
+  { src: './assets/Screenshot_20261009_193602_Photos.jpg', caption: 'Meu lugar favorito é ficar agarradinho com você e nn sair mais.' },
+  { src: './assets/IMG-20260908-WA0041.jpg', caption: 'A gente, viajando juntinhosss (e o arthur enchendo nosso saco).' },
+  { src: './assets/IMG-20260706-WA0019.jpg', caption: 'Um ano de muito amor, tesao e paixao linda.' },
   { src: './assets/IMG-20260706-WA0038.jpg', caption: 'Quero colecionar muitos momentos assim.' },
-  { src: './assets/IMG-20260608-WA0039.jpg', caption: 'Com você, até os dias comuns são especiais.' },
-  { src: './assets/IMG-20260305-WA0042.jpg', caption: 'Mais uma memória nossa para guardar.' },
+  { src: './assets/IMG-20260608-WA0039.jpg', caption: 'Com você, até os dias comuns são especiais. E os especiais sao mais especiais ainda' },
+  { src: './assets/IMG-20260305-WA0042.jpg', caption: 'O dia q vc me deixou beiçudo com aquele gloss.' },
   { src: './assets/IMG-20260224-WA0051.jpg', caption: 'Você deixa tudo mais bonito.' },
-  { src: './assets/WhatsApp Image 2026-09-20 at 12.03.17.jpeg', caption: 'Que venham muitos outros capítulos.' }
+  { src: './assets/WhatsApp Image 2026-09-20 at 12.03.17.jpeg', caption: 'Eu e sua mae catando jabuticaba e vc so farmando beleza ( ganhou mais infinita porcentagem de beleza so com essa foto hehe).' }
 ];
 
 // Use uma resposta que só vocês conheçam. Espaços e maiúsculas são ignorados.
